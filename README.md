@@ -28,7 +28,7 @@ A custom differential-drive mobile robot built using ROS2 Humble and Gazebo capa
 
 ### Generated Occupancy Map
 
-(Add screenshot)
+![Robot in Gazebo](images/MapBeingGenerated.png)
 
 ---
 
