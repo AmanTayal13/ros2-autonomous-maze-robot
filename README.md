@@ -20,12 +20,11 @@ A custom differential-drive mobile robot built using ROS2 Humble and Gazebo capa
 ## Demo
 
 ### Robot Model
+![Robot in Gazebo](images/robot.png)
 
-(Add screenshot)
 
 ### Gazebo World
-
-(Add screenshot)
+![Robot in Gazebo](images/RobotInMaze.png)
 
 ### Generated Occupancy Map
 
