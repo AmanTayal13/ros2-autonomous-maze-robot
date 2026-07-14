@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <link name="lidar_link">
+        <visual>
+        <geometry>
+            <cylinder length="0.05" radius="0.04"/>
+        </geometry>
+        <material name="black"/>
+        </visual>
+    </link>
+
+    <!-- Fixed joint attaching LiDAR to head -->
+    <joint name="lidar_joint" type="fixed">
+        <parent link="head"/>
+        <child link="lidar_link"/>
+        <origin xyz="0 0 0.15" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Gazebo plugin for LiDAR -->
+    <gazebo reference="lidar_link">
+        <sensor name="lidar_sensor" type="ray">
+            <pose>0 0 0 0 0 0</pose>
+            <update_rate>10</update_rate>
+            <visulize>true</visulize>
+            <ray>
+                <scan>
+                    <horizontal>
+                        <samples>360</samples>
+                        <resolution>1</resolution>
+                        <min_angle>-3.14</min_angle>
+                        <max_angle>3.14</max_angle>
+                    </horizontal>
+                </scan>
+                <range>
+                    <min>0.3</min>
+                    <max>12</max>
+                    <resolution>0.01</resolution>
+                </range>
+            </ray>
+            <plugin name="gazebo_ros_laser" filename="libgazebo_ros_ray_sensor.so">
+                <ros>
+                    <argument>~/out:=scan</argument>
+                </ros>
+                <frameName>lidar_link</frameName>
+                <output_type>sensor_msgs/LaserScan</output_type>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+</robot>
