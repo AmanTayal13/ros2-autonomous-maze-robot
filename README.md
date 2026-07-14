@@ -41,7 +41,6 @@ A custom differential-drive mobile robot built using ROS2 Humble and Gazebo capa
 - SLAM Toolbox
 - RViz2
 - URDF/Xacro
-- C++
 - Python
 
 ---
@@ -95,7 +94,6 @@ ros2 run nav2_map_server map_saver_cli -f my_map
 - Path planning
 - Goal selection in RViz
 - Obstacle avoidance
-- C++ node implementation
 - Improved robot dynamics
 
 ---
