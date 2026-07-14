@@ -1,5 +1,10 @@
 # ROS2 Autonomous Maze Robot
 
+![ROS2](https://img.shields.io/badge/ROS2-Humble-blue)
+![Gazebo](https://img.shields.io/badge/Simulation-Gazebo-orange)
+![SLAM](https://img.shields.io/badge/SLAM-Toolbox-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 A custom differential-drive mobile robot built using ROS2 Humble and Gazebo capable of mapping an unknown maze using SLAM and designed for autonomous navigation using Nav2.
 
 ---
